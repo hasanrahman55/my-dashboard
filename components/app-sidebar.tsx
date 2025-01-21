@@ -1,5 +1,4 @@
 "use client";
-
 import * as React from "react";
 import {
   BookOpen,
@@ -38,7 +37,7 @@ const data = {
       items: [
         {
           title: "List",
-          url: "dashboard/list",
+          url: "list",
         },
         {
           title: "Starred",
