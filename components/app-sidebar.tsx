@@ -31,14 +31,14 @@ const data = {
 
   navMain: [
     {
-      title: "Playground",
+      title: "Product",
       url: "#",
       icon: SquareTerminal,
       isActive: true,
       items: [
         {
-          title: "History",
-          url: "#",
+          title: "List",
+          url: "dashboard/list",
         },
         {
           title: "Starred",
