@@ -1,28 +1,114 @@
-import { Payment, columns } from "./columns";
+import { columns, Product } from "./columns";
 import { DataTable } from "./data-table";
 
-async function getData(): Promise<Payment[]> {
+async function getData(): Promise<Product[]> {
   // Fetch data from your API here.
   return [
     {
-      id: "728ed52f",
-      amount: 100,
-      status: "pending",
-      email: "m@example.com",
+      id: "1",
+      product: "Product 1",
+      price: 100,
+      quantity: 2,
+      sales: 50,
     },
     {
-      id: "728ed52f",
-      amount: 100,
-      status: "pending",
-      email: "a@example.com",
+      id: "2",
+      product: "Product 2",
+      price: 200,
+      quantity: 3,
+      sales: 75,
     },
     {
-      id: "728ed52f",
-      amount: 100,
-      status: "pending",
-      email: "b@example.com",
+      id: "3",
+      product: "Product 3",
+      price: 300,
+      quantity: 1,
+      sales: 25,
     },
-    // ...
+    {
+      id: "4",
+      product: "Product 4",
+      price: 400,
+      quantity: 4,
+      sales: 100,
+    },
+    {
+      id: "5",
+      product: "Product 5",
+      price: 500,
+      quantity: 5,
+      sales: 125,
+    },
+    {
+      id: "1",
+      product: "Product 1",
+      price: 100,
+      quantity: 2,
+      sales: 50,
+    },
+    {
+      id: "2",
+      product: "Product 2",
+      price: 200,
+      quantity: 3,
+      sales: 75,
+    },
+    {
+      id: "3",
+      product: "Product 3",
+      price: 300,
+      quantity: 1,
+      sales: 25,
+    },
+    {
+      id: "4",
+      product: "Product 4",
+      price: 400,
+      quantity: 4,
+      sales: 100,
+    },
+    {
+      id: "5",
+      product: "Product 5",
+      price: 500,
+      quantity: 5,
+      sales: 125,
+    },
+    {
+      id: "1",
+      product: "Product 1",
+      price: 100,
+      quantity: 2,
+      sales: 50,
+    },
+    {
+      id: "2",
+      product: "Product 2",
+      price: 200,
+      quantity: 3,
+      sales: 75,
+    },
+    {
+      id: "3",
+      product: "Product 3",
+      price: 300,
+      quantity: 1,
+      sales: 25,
+    },
+    {
+      id: "4",
+      product: "Product 4",
+      price: 400,
+      quantity: 4,
+      sales: 100,
+    },
+    {
+      id: "5",
+      product: "Product 5",
+      price: 500,
+      quantity: 5,
+      sales: 125,
+    },
   ];
 }
 
