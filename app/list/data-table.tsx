@@ -23,6 +23,7 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { DataTablePagination } from "@/components/pagination";
+import AddButton from "@/components/add-button";
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];
@@ -70,7 +71,7 @@ export function DataTable<TData, TValue>({
         </div>
 
         <div>
-          <Button>Add Product</Button>
+          <AddButton />
         </div>
       </div>
 
