@@ -126,6 +126,9 @@ function CreateProduct() {
             </FormItem>
           )}
         />
+        <Button type="submit" className="text-end">
+          Save
+        </Button>
       </form>
     </Form>
   );
