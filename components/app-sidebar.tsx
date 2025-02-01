@@ -1,14 +1,6 @@
 "use client";
 import * as React from "react";
-import {
-  BookOpen,
-  Bot,
-  Frame,
-  Map,
-  PieChart,
-  Settings2,
-  SquareTerminal,
-} from "lucide-react";
+import { ChartNoAxesCombined, SquareTerminal } from "lucide-react";
 
 import { NavMain } from "@/components/nav-main";
 import { NavProjects } from "@/components/nav-projects";
@@ -70,7 +62,7 @@ const data = {
     {
       name: "Analytic",
       url: "analytic",
-      icon: Frame,
+      icon: ChartNoAxesCombined,
     },
   ],
 };
