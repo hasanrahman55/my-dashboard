@@ -68,8 +68,8 @@ const data = {
   ],
   projects: [
     {
-      name: "Dashboard",
-      url: "list",
+      name: "Analytic",
+      url: "analytic",
       icon: Frame,
     },
   ],
