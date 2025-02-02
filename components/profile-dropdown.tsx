@@ -1,3 +1,4 @@
+"use client";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -6,17 +7,24 @@ import {
   DropdownMenuItem,
   DropdownMenuLabel,
   DropdownMenuSeparator,
-  DropdownMenuShortcut,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { LogOut, Settings, UserCog } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 export function ProfileDropdown() {
   const user = {
     name: "Hasan Rahman",
     email: "hasanrahman@example.com",
     avatar: "/avatars/logo.jpeg",
+  };
+
+  const router = useRouter();
+
+  const handleLogout = () => {
+    router.replace("/");
   };
   return (
     <DropdownMenu>
@@ -52,18 +60,19 @@ export function ProfileDropdown() {
 
         <DropdownMenuGroup>
           <DropdownMenuItem>
+            <UserCog />
             Profile
-            <DropdownMenuShortcut>⇧⌘P</DropdownMenuShortcut>
           </DropdownMenuItem>
           <DropdownMenuItem>
+            <Settings />
             {/* <GearSix size={32} weight="duotone" /> */}
             Settings
           </DropdownMenuItem>
         </DropdownMenuGroup>
         <DropdownMenuSeparator />
-        <DropdownMenuItem>
+        <DropdownMenuItem onClick={handleLogout}>
+          <LogOut />
           Log out
-          <DropdownMenuShortcut>⇧⌘Q</DropdownMenuShortcut>
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>

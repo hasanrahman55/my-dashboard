@@ -4,7 +4,6 @@ import { ChartNoAxesCombined, SquareTerminal } from "lucide-react";
 
 import { NavMain } from "@/components/nav-main";
 import { NavProjects } from "@/components/nav-projects";
-import { NavUser } from "@/components/nav-user";
 import {
   Sidebar,
   SidebarContent,
@@ -70,8 +69,8 @@ const data = {
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
     <Sidebar collapsible="icon" {...props}>
-      <SidebarHeader>
-        <NavUser user={data.user} />
+      <SidebarHeader className="text-center text-2xl font-bold">
+        <h1>My Dashboard</h1>
       </SidebarHeader>
       <SidebarContent>
         <NavProjects projects={data.projects} />
