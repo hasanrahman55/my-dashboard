@@ -17,7 +17,7 @@ export default function RootLayout({
       <SidebarProvider>
         <AppSidebar />
         <SidebarInset>
-          <header className="fixed w-full z-[999] flex h-16 shrink-0 items-center gap-2 transition-[width,height] ease-linear group-has-[[data-collapsible=icon]]/sidebar-wrapper:h-12 bg-[#fafafa] shadow-lg  dark:bg-[#1a1a1a] dark:text-white">
+          <header className="fixed w-full z-[99] flex h-16 shrink-0 items-center gap-2 transition-[width,height] ease-linear group-has-[[data-collapsible=icon]]/sidebar-wrapper:h-12 bg-[#fafafa] shadow-lg  dark:bg-[#1a1a1a] dark:text-white">
             <div className="flex items-center gap-2 px-4">
               <SidebarTrigger className="-ml-1" />
               <Separator
