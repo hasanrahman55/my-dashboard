@@ -4,6 +4,7 @@ import {
   ChartNoAxesCombined,
   GalleryVerticalEnd,
   SquareTerminal,
+  Calendar,
 } from "lucide-react";
 
 import { NavMain } from "@/components/nav-main";
@@ -69,6 +70,11 @@ const data = {
       name: "Analytic",
       url: "analytic",
       icon: ChartNoAxesCombined,
+    },
+    {
+      name: "Calendar",
+      url: "calendar",
+      icon: Calendar,
     },
   ],
 };
