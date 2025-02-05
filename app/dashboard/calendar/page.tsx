@@ -17,6 +17,10 @@ import {
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 
+interface DateInfo {
+  dateStr: string;
+}
+
 export default function EventCalendar() {
   const [events, setEvents] = useState([
     { title: "Meeting", date: "2025-02-05" },
@@ -36,7 +40,7 @@ export default function EventCalendar() {
   };
 
   // Open dialog when clicking a date
-  const handleDateClick = (info: any) => {
+  const handleDateClick = (info: DateInfo) => {
     setNewEvent({ title: "", date: info.dateStr });
     setOpen(true);
   };
