@@ -17,7 +17,10 @@ import {
   SidebarMenu,
   SidebarMenuItem,
   SidebarMenuButton,
+  SidebarFooter,
 } from "@/components/ui/sidebar";
+import { ModeToggle } from "./mode-toggle";
+import { ProfileDropdown } from "./profile-dropdown";
 
 // This is sample data.
 const data = {
@@ -103,6 +106,12 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
         <NavMain items={data.navMain} />
       </SidebarContent>
       <SidebarRail />
+      <SidebarFooter>
+        <div className="flex w-full flex-wrap items-center justify-center gap-3 px-4 mb-6">
+          <ModeToggle />
+          <ProfileDropdown />
+        </div>
+      </SidebarFooter>
     </Sidebar>
   );
 }
