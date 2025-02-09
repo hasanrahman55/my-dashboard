@@ -5,6 +5,7 @@ import {
   GalleryVerticalEnd,
   SquareTerminal,
   Calendar,
+  ShoppingCart,
 } from "lucide-react";
 
 import { NavMain } from "@/components/nav-main";
@@ -83,7 +84,7 @@ const data = {
     {
       name: "Product",
       url: "product",
-      icon: Calendar,
+      icon: ShoppingCart,
     },
   ],
 };
