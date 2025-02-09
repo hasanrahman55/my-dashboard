@@ -43,6 +43,7 @@ export function DataTable<TData, TValue>({
     if (!globalFilter) return data;
 
     return data.filter(
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       (item: any) =>
         item.title.toLowerCase().includes(globalFilter.toLowerCase()) ||
         item.category.toLowerCase().includes(globalFilter.toLowerCase())
