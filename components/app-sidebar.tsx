@@ -80,6 +80,11 @@ const data = {
       url: "calendar",
       icon: Calendar,
     },
+    {
+      name: "Product",
+      url: "product",
+      icon: Calendar,
+    },
   ],
 };
 
