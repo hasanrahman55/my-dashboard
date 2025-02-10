@@ -68,7 +68,7 @@ export default function RootLayout({
             </div>
           </header>
 
-          <div className="p-6 mt-16">{children}</div>
+          <div className="p-6 ">{children}</div>
         </SidebarInset>
       </SidebarProvider>
     </>
