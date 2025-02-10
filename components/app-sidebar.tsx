@@ -46,6 +46,23 @@ const data = {
       ],
     },
 
+    {
+      title: "Authentication",
+      url: "#",
+      icon: SquareTerminal,
+      isActive: true,
+      items: [
+        {
+          title: "Login",
+          url: "/",
+        },
+        {
+          title: "Register",
+          url: "/signup",
+        },
+      ],
+    },
+
     // {
     //   title: "Documentation",
     //   url: "#",
