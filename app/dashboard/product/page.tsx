@@ -2,15 +2,7 @@
 import { useQuery } from "@tanstack/react-query";
 import { columns } from "./columns";
 import { DataTable } from "./data-table";
-
-const fetchProduct = async () => {
-  const res = await fetch("https://fakestoreapi.com/products");
-
-  if (!res.ok) {
-    throw new Error("Failed to fetch data");
-  }
-  return res.json();
-};
+import { fetchProduct } from "@/lib/api";
 
 export default function DemoPage() {
   const { data, isLoading, error } = useQuery({
