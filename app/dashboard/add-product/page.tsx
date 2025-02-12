@@ -39,7 +39,7 @@ const AddProductPage = () => {
   const handleSaveProduct = () => {
     try {
       productSchema.parse(product);
-      alert("Product saved successfully!");
+      // alert("Product saved successfully!");
       router.replace("/dashboard/product"); // Replace with your preferred route
       setProduct({ title: "", category: "", price: 0 }); // Reset the form
       setError({}); // Reset any previous errors
