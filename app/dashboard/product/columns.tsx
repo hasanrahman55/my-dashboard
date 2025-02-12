@@ -4,6 +4,8 @@ import { ColumnDef } from "@tanstack/react-table";
 import { DataTableColumnHeader } from "@/components/ColumnHeader";
 import { MoreHorizontal } from "lucide-react";
 
+import { deleteProduct } from "@/lib/api";
+
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -50,6 +52,15 @@ export const columns: ColumnDef<Product>[] = [
     cell: ({ row }) => {
       const payment = row.original;
 
+      const handleDelete = async (id: string) => {
+        try {
+          await deleteProduct(id);
+          alert("Product deleted successfully!");
+        } catch (error) {
+          alert("Error deleting product");
+        }
+      };
+
       return (
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
@@ -66,9 +77,7 @@ export const columns: ColumnDef<Product>[] = [
               Edit
             </DropdownMenuItem>
             <DropdownMenuSeparator />
-            <DropdownMenuItem
-              onClick={() => navigator.clipboard.writeText(payment.id)}
-            >
+            <DropdownMenuItem onClick={() => handleDelete(payment.id)}>
               Delete
             </DropdownMenuItem>
           </DropdownMenuContent>
