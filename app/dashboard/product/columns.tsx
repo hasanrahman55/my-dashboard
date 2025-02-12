@@ -50,7 +50,7 @@ export const columns: ColumnDef<Product>[] = [
     cell: ({ row }) => {
       const payment = row.original;
 
-      const handleDelete = async (id: string) => {
+      const handleDelete = async () => {
         try {
           alert("Product deleted successfully!");
           // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -75,7 +75,7 @@ export const columns: ColumnDef<Product>[] = [
               Edit
             </DropdownMenuItem>
             <DropdownMenuSeparator />
-            <DropdownMenuItem onClick={() => handleDelete(payment.id)}>
+            <DropdownMenuItem onClick={() => handleDelete()}>
               Delete
             </DropdownMenuItem>
           </DropdownMenuContent>

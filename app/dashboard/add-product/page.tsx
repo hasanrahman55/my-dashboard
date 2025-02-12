@@ -19,36 +19,38 @@ type Product = {
   price: number;
 };
 
+// Define error types
+type ErrorType = {
+  [key: string]: string | undefined;
+  title?: string;
+  category?: string;
+  price?: string;
+};
+
 const AddProductPage = () => {
   const [product, setProduct] = useState<Product>({
     title: "",
     category: "",
     price: 0,
   });
-  const [error, setError] = useState<string | null>(null); // To handle form validation errors
+  const [error, setError] = useState<ErrorType>({}); // Initializing error as an empty object
   const router = useRouter(); // To navigate after saving
 
   const handleSaveProduct = () => {
     try {
-      // Validate product data using Zod
       productSchema.parse(product);
-
-      // If validation is successful, simulate saving product
       alert("Product saved successfully!");
-
-      // Navigate to another page after successful save (like a product list page)
       router.replace("/dashboard/product"); // Replace with your preferred route
-
       setProduct({ title: "", category: "", price: 0 }); // Reset the form
-      setError(null); // Reset any previous errors
+      setError({}); // Reset any previous errors
     } catch (err) {
       if (err instanceof z.ZodError) {
         // Capture and show the Zod validation errors
-        const errorMessages: { [key: string]: string } = {};
+        const errorMessages: ErrorType = {};
         err.errors.forEach((e) => {
-          errorMessages[e.path[0]] = e.message;
+          errorMessages[e.path[0]] = e.message; // Map the error messages to the fields
         });
-        setError(errorMessages);
+        setError(errorMessages); // Update the error state with the error messages
       }
     }
   };
@@ -71,7 +73,7 @@ const AddProductPage = () => {
             onChange={(e) => setProduct({ ...product, title: e.target.value })}
             className="w-full mt-2 p-3 border rounded-md shadow-sm focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100"
           />
-          {error?.title && (
+          {error.title && (
             <p className="mt-1 text-sm text-red-500 dark:text-red-400">
               {error.title}
             </p>
@@ -98,10 +100,9 @@ const AddProductPage = () => {
             <option value="menClothing">Men clothing</option>
             <option value="jewelery">Jewelery</option>
             <option value="electronics">Electronics</option>
-            <option value="womenClothing">women clothing</option>
-            {/* Add more categories as needed */}
+            <option value="womenClothing">Women clothing</option>
           </select>
-          {error?.category && (
+          {error.category && (
             <p className="mt-1 text-sm text-red-500 dark:text-red-400">
               {error.category}
             </p>
@@ -123,7 +124,7 @@ const AddProductPage = () => {
             }
             className="w-full mt-2 p-3 border rounded-md shadow-sm focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100"
           />
-          {error?.price && (
+          {error.price && (
             <p className="mt-1 text-sm text-red-500 dark:text-red-400">
               {error.price}
             </p>
