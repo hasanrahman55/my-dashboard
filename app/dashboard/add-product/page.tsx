@@ -95,10 +95,10 @@ const AddProductPage = () => {
             className="w-full mt-2 p-3 border rounded-md shadow-sm focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100"
           >
             <option value="">Select a category</option>
-            <option value="menClothing">Men's clothing</option>
+            <option value="menClothing">Men clothing</option>
             <option value="jewelery">Jewelery</option>
             <option value="electronics">Electronics</option>
-            <option value="womenClothing">women's clothing</option>
+            <option value="womenClothing">women clothing</option>
             {/* Add more categories as needed */}
           </select>
           {error?.category && (
