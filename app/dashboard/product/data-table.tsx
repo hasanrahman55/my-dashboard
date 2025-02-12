@@ -22,6 +22,8 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { DataTablePagination } from "@/components/pagination";
+import { useRouter } from "next/navigation";
+import { Button } from "@/components/ui/button";
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];
@@ -64,6 +66,10 @@ export function DataTable<TData, TValue>({
       columnFilters,
     },
   });
+  const router = useRouter();
+  const handleAddProduct = () => {
+    router.push("add-product"); // Navigate to the Add Product page
+  };
 
   return (
     <div>
@@ -77,10 +83,7 @@ export function DataTable<TData, TValue>({
             className="w-[200px]"
           />
         </div>
-
-        {/* <div>
-          <AddButton />
-        </div> */}
+        <Button onClick={handleAddProduct}>Add Product</Button>
       </div>
 
       {/* Table */}
