@@ -8,7 +8,7 @@ import { useRouter } from "next/navigation"; // Using next/navigation for routin
 
 // Define your product schema with Zod
 const productSchema = z.object({
-  title: z.string().min(1, "Title is required"),
+  title: z.string().min(3, "Title must be at least 3 characters"),
   category: z.string().min(1, "Category is required"),
   price: z.number().min(1, "Price must be a positive number"),
 });

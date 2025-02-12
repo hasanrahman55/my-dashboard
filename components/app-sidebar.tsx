@@ -34,19 +34,6 @@ const data = {
 
   navMain: [
     {
-      title: "Product",
-      url: "#",
-      icon: SquareTerminal,
-      isActive: true,
-      items: [
-        {
-          title: "List",
-          url: "list",
-        },
-      ],
-    },
-
-    {
       title: "Authentication",
       url: "#",
       icon: SquareTerminal,
